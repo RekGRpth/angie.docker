@@ -100,7 +100,7 @@ RUN set -eux; \
     git clone -b master https://github.com/RekGRpth/ngx_upstream_jdomain.git; \
     git clone -b master https://github.com/RekGRpth/set-misc-nginx-module.git; \
     cd "$HOME/src/angie"; \
-    auto/configure \
+    ./configure \
         --add-dynamic-module="modules/ngx_devel_kit $(find modules -type f -name "config" | grep -v -e ngx_devel_kit -e "\.git" -e "\/t\/" | while read -r NAME; do echo -n "`dirname "$NAME"` "; done)" \
         --conf-path=/etc/nginx/nginx.conf \
         --error-log-path=/var/log/nginx/error.log \
