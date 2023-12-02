@@ -1,4 +1,4 @@
-FROM ghcr.io/rekgrpth/nginx.docker:ubuntu
+FROM ghcr.io/rekgrpth/angie.docker:ubuntu
 ADD bin /usr/local/bin
 ADD NimbusSans-Regular.ttf /usr/local/share/fonts/
 CMD [ "nginx" ]
@@ -31,9 +31,9 @@ RUN set -eux; \
     ; \
     mkdir -p "$HOME/src"; \
     cd "$HOME/src"; \
-    git clone -b master https://github.com/RekGRpth/nginx.git; \
-    mkdir -p "$HOME/src/nginx/modules"; \
-    cd "$HOME/src/nginx/modules"; \
+    git clone -b master https://github.com/RekGRpth/angie.git; \
+    mkdir -p "$HOME/src/angie/modules"; \
+    cd "$HOME/src/angie/modules"; \
     git clone -b main https://github.com/RekGRpth/nginx-ejwt-module.git; \
     git clone -b main https://github.com/RekGRpth/ngx_http_error_page_inherit_module.git; \
     git clone -b main https://github.com/RekGRpth/ngx_http_include_server_module.git; \
@@ -72,7 +72,7 @@ RUN set -eux; \
     gosu postgres initdb --auth=trust --encoding=UTF8 --pgdata=/var/lib/postgresql/data; \
     gosu postgres pg_ctl -w start --pgdata=/var/lib/postgresql/data; \
     cd "$HOME"; \
-    find "$HOME/src/nginx/modules" -type d -name "t" | grep -v "\.git" | sort | while read -r NAME; do cd "$(dirname "$NAME")" && prove; done; \
+    find "$HOME/src/angie/modules" -type d -name "t" | grep -v "\.git" | sort | while read -r NAME; do cd "$(dirname "$NAME")" && prove; done; \
     gosu postgres pg_ctl -m fast -w stop --pgdata=/var/lib/postgresql/data; \
     cd /; \
     apt-mark auto '.*' > /dev/null; \
