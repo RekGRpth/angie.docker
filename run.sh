@@ -23,7 +23,6 @@ docker run \
     --mount type=bind,source=/var/log/angie,destination=/var/log/nginx \
     --mount type=volume,source=angie,destination=/var/cache/nginx \
     --name angie \
-    --publish target=443,published=443,mode=host \
     --restart always \
     --network name=docker,alias=$(hostname -f),alias=libreoffice."$(hostname -d)",alias=api-$(hostname -f),alias=graphql-$(hostname -f),alias=cas-$(hostname -f)$(docker volume ls --format "{{.Name}}" | while read VOLUME; do
         echo -n ",alias=$VOLUME-$(hostname -f)"
@@ -35,3 +34,4 @@ docker run \
         done
     done) \
     "ghcr.io/rekgrpth/angie.docker:${INPUTS_BRANCH:-latest}"
+#    --publish target=443,published=443,mode=host \
