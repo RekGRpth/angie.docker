@@ -145,6 +145,7 @@ RUN set -eux; \
         --with-cc-opt="-fno-omit-frame-pointer -Werror=implicit-function-declaration -Werror=incompatible-pointer-types -Wextra -Wwrite-strings -Werror -Wno-discarded-qualifiers" \
         --with-compat \
         --with-file-aio \
+        --with-http_acme_module \
         --with-http_addition_module \
         --with-http_auth_request_module \
         --with-http_dav_module \
@@ -163,13 +164,19 @@ RUN set -eux; \
         --with-http_stub_status_module \
         --with-http_sub_module \
         --with-http_v2_module \
+        --with-http_v3_module \
         --with-http_xslt_module=dynamic \
+        --with-mail=dynamic \
+        --with-mail_ssl_module \
         --with-pcre \
         --with-pcre-jit \
         --with-poll_module \
         --with-select_module \
+        --with-stream_acme_module \
         --with-stream=dynamic \
         --with-stream_geoip_module=dynamic \
+        --with-stream_mqtt_preread_module \
+        --with-stream_rdp_preread_module \
         --with-stream_realip_module \
         --with-stream_ssl_module \
         --with-stream_ssl_preread_module \
