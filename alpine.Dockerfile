@@ -167,12 +167,11 @@ RUN set -eux; \
         --with-http_xslt_module=dynamic \
         --with-mail=dynamic \
         --with-mail_ssl_module \
-        --without-http_api_module \
         --with-pcre \
         --with-pcre-jit \
         --with-poll_module \
         --with-select_module \
-        --with-stream=dynamic \
+        --with-stream \
         --with-stream_geoip_module=dynamic \
         --with-stream_mqtt_preread_module \
         --with-stream_rdp_preread_module \
