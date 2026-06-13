@@ -82,6 +82,7 @@ RUN set -eux; \
     git clone -b main https://github.com/RekGRpth/ngx_http_error_page_inherit_module.git; \
     git clone -b main https://github.com/RekGRpth/ngx_http_include_server_module.git; \
     git clone -b main https://github.com/RekGRpth/ngx_http_json_var_module.git; \
+    git clone -b main https://github.com/RekGRpth/ngx_http_upstream_queue_module.git; \
     git clone -b main https://github.com/RekGRpth/ngx_pq_module.git; \
     git clone -b master https://github.com/RekGRpth/echo-nginx-module.git; \
     git clone -b master https://github.com/RekGRpth/encrypted-session-nginx-module.git; \
@@ -109,6 +110,7 @@ RUN set -eux; \
 #    git clone -b master https://github.com/RekGRpth/ngx_http_substitutions_filter_module.git; \
     git clone -b master https://github.com/RekGRpth/ngx_http_time_var_module.git; \
     git clone -b master https://github.com/RekGRpth/ngx_http_zip_var_module.git; \
+    git clone -b master https://github.com/RekGRpth/ngx_upstream_jdomain.git; \
     git clone -b master https://github.com/RekGRpth/set-misc-nginx-module.git; \
     cd "$HOME/src/angie"; \
     ./configure \
@@ -150,13 +152,18 @@ RUN set -eux; \
         --with-http_stub_status_module \
         --with-http_sub_module \
         --with-http_v2_module \
+        --with-http_v3_module \
         --with-http_xslt_module=dynamic \
+        --with-mail=dynamic \
+        --with-mail_ssl_module \
         --with-pcre \
         --with-pcre-jit \
         --with-poll_module \
         --with-select_module \
-        --with-stream=dynamic \
+        --with-stream \
         --with-stream_geoip_module=dynamic \
+        --with-stream_mqtt_preread_module \
+        --with-stream_rdp_preread_module \
         --with-stream_realip_module \
         --with-stream_ssl_module \
         --with-stream_ssl_preread_module \
