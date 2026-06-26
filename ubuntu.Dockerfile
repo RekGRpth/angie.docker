@@ -170,7 +170,7 @@ RUN set -eux; \
         --with-pcre-jit \
         --with-poll_module \
         --with-select_module \
-        --with-stream \
+        --with-stream=dynamic \
         --with-stream_geoip_module=dynamic \
         --with-stream_mqtt_preread_module \
         --with-stream_rdp_preread_module \
