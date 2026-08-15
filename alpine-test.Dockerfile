@@ -86,8 +86,8 @@ RUN set -eux; \
     git clone -b main https://github.com/RekGRpth/ngx_http_upstream_queue_module.git; \
     git clone -b main https://github.com/RekGRpth/ngx_pq_module.git; \
     git clone -b master https://github.com/RekGRpth/echo-nginx-module.git; \
-    git clone -b master https://github.com/RekGRpth/encrypted-session-nginx-module.git; \
-    git clone -b master https://github.com/RekGRpth/form-input-nginx-module.git; \
+#    git clone -b master https://github.com/RekGRpth/encrypted-session-nginx-module.git; \
+#    git clone -b master https://github.com/RekGRpth/form-input-nginx-module.git; \
 #    git clone -b master https://github.com/RekGRpth/headers-more-nginx-module.git; \
 #    git clone -b master https://github.com/RekGRpth/iconv-nginx-module.git; \
     git clone -b master https://github.com/RekGRpth/nginx_csrf_prevent.git; \
@@ -97,10 +97,10 @@ RUN set -eux; \
     git clone -b master https://github.com/RekGRpth/nginx-uuid4-module.git; \
     git clone -b master https://github.com/RekGRpth/ngx_brotli.git; \
     git clone -b master https://github.com/RekGRpth/ngx_devel_kit.git; \
-    git clone -b master https://github.com/RekGRpth/ngx_http_auth_basic_ldap_module.git; \
+#    git clone -b master https://github.com/RekGRpth/ngx_http_auth_basic_ldap_module.git; \
     git clone -b master https://github.com/RekGRpth/ngx_http_auth_pam_module.git; \
-    git clone -b master https://github.com/RekGRpth/ngx_http_captcha_module.git; \
-    git clone -b master https://github.com/RekGRpth/ngx_http_evaluate_module.git; \
+#    git clone -b master https://github.com/RekGRpth/ngx_http_captcha_module.git; \
+#    git clone -b master https://github.com/RekGRpth/ngx_http_evaluate_module.git; \
     git clone -b master https://github.com/RekGRpth/ngx_http_headers_module.git; \
     git clone -b master https://github.com/RekGRpth/ngx_http_htmldoc_module.git; \
     git clone -b master https://github.com/RekGRpth/ngx_http_json_module.git; \
@@ -112,7 +112,7 @@ RUN set -eux; \
     git clone -b master https://github.com/RekGRpth/ngx_http_time_var_module.git; \
     git clone -b master https://github.com/RekGRpth/ngx_http_zip_var_module.git; \
 #    git clone -b master https://github.com/RekGRpth/ngx_upstream_jdomain.git; \
-    git clone -b master https://github.com/RekGRpth/set-misc-nginx-module.git; \
+#    git clone -b master https://github.com/RekGRpth/set-misc-nginx-module.git; \
     cd "$HOME/src/angie"; \
     ./configure \
         --add-dynamic-module="modules/ngx_devel_kit $(find modules -type f -name "config" | grep -v -e ngx_devel_kit -e "\.git" -e "\/t\/" | while read -r NAME; do echo -n "`dirname "$NAME"` "; done)" \
