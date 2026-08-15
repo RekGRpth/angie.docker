@@ -102,7 +102,7 @@ RUN set -eux; \
     git clone -b master https://github.com/RekGRpth/nginx-uuid4-module.git; \
     git clone -b master https://github.com/RekGRpth/ngx_brotli.git; \
     git clone -b master https://github.com/RekGRpth/ngx_devel_kit.git; \
-    git clone -b master https://github.com/RekGRpth/ngx_http_auth_basic_ldap_module.git; \
+#    git clone -b master https://github.com/RekGRpth/ngx_http_auth_basic_ldap_module.git; \
     git clone -b master https://github.com/RekGRpth/ngx_http_auth_pam_module.git; \
     git clone -b master https://github.com/RekGRpth/ngx_http_captcha_module.git; \
     git clone -b master https://github.com/RekGRpth/ngx_http_evaluate_module.git; \
