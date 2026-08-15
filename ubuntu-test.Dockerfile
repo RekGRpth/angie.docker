@@ -12,7 +12,6 @@ RUN set -eux; \
     chmod +x /usr/local/bin/*.sh; \
     apt-get update; \
     apt-get full-upgrade -y --no-install-recommends; \
-    export savedAptMark="$(apt-mark showmanual)"; \
     apt-get install -y --no-install-recommends \
         apt-utils \
         autoconf \
@@ -30,6 +29,7 @@ RUN set -eux; \
         flex \
         g++ \
         gcc \
+        gdb \
         git \
         lcov \
         libbrotli-dev \
