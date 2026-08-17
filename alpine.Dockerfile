@@ -143,7 +143,10 @@ RUN set -eux; \
         --user="$USER" \
         --with-cc-opt="-fno-omit-frame-pointer -Werror=implicit-function-declaration -Werror=incompatible-pointer-types -Wextra -Wwrite-strings -Werror -Wno-discarded-qualifiers" \
         --with-compat \
+        --with-cpp_test_module \
         --with-file-aio \
+        --with-google_perftools_module \
+        --with-http_acme_module \
         --with-http_addition_module \
         --with-http_auth_request_module \
         --with-http_dav_module \
@@ -171,6 +174,7 @@ RUN set -eux; \
         --with-poll_module \
         --with-select_module \
         --with-stream=dynamic \
+        --with-stream_acme_module \
         --with-stream_geoip_module=dynamic \
         --with-stream_mqtt_preread_module \
         --with-stream_rdp_preread_module \
